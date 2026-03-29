@@ -29,6 +29,95 @@ JS INDEX
 
 	jQuery(document).ready(function ($) {
 
+		// --- Custom Search Overlay Logic ---
+        var games = []; // Will be loaded from search.json
+
+        // Load games from search.json
+        $.getJSON('search.json', function(data) {
+            games = data;
+            // Now set up the search functionality
+            setupSearch();
+        }).fail(function() {
+            console.error('Failed to load search.json');
+        });
+
+        function setupSearch() {
+            function showSearchOverlay() {
+                $("#searchOverlay").addClass("active");
+                setTimeout(function() { $("#searchOverlayInput").focus(); }, 100);
+                $("body").css("overflow", "hidden");
+                $("#searchOverlayInput").val("");
+                renderSearchResults("");
+            }
+            function hideSearchOverlay() {
+                $("#searchOverlay").removeClass("active");
+                $("body").css("overflow", "auto");
+            }
+            function renderSearchResults(query) {
+                var results = games.filter(function(game) {
+                    return game.title.toLowerCase().includes(query.toLowerCase());
+                });
+                var html = results.map(function(game) {
+                    return '<a class="search-result-item" href="' + game.url + '">' +
+                        '<img class="search-result-thumb" src="' + game.img + '" alt="' + game.title + '" />' +
+                        '<div class="search-result-title">' + game.title + '</div>' +
+                    '</a>';
+                }).join("");
+                if (results.length === 0) {
+                    html = '<div style="color:#fff;font-size:22px;padding:40px 0;width:100%;text-align:center;">No games found.</div>';
+                }
+                $("#searchResults").html(html);
+            }
+
+            // Show/hide modal background
+            function showOverlayBg() {
+                $(".search-overlay-bg").show();
+            }
+            function hideOverlayBg() {
+                $(".search-overlay-bg").hide();
+            }
+
+            // Open overlay on search bar click
+            $(document).on("click", ".search-bar-container, #gameSearchInput, .search-bar-icon", function(e) {
+                e.stopPropagation();
+                showSearchOverlay();
+                showOverlayBg();
+            });
+            // Close overlay
+            $(document).on("click", "#searchOverlayClose", function() {
+                hideSearchOverlay();
+                hideOverlayBg();
+            });
+            // Close on Escape
+            $(document).on("keydown", function(e) {
+                if (e.key === "Escape") {
+                    hideSearchOverlay();
+                    hideOverlayBg();
+                }
+            });
+            // Click outside modal to close
+            $(document).on("click", ".search-overlay-bg", function() {
+                hideSearchOverlay();
+                hideOverlayBg();
+            });
+            // Prevent overlay click from closing
+            $(document).on("click", "#searchOverlay", function(e) {
+                if (e.target === this) hideSearchOverlay();
+            });
+            // Search as you type
+            $(document).on("input", "#searchOverlayInput", function() {
+                renderSearchResults(this.value);
+            });
+
+            // Enter on result
+            $(document).on("keydown", "#searchOverlayInput", function(e) {
+                if (e.key === "Enter") {
+                    var first = $("#searchResults .search-result-item").first();
+                    if (first.length) window.location = first.attr("href");
+                }
+            });
+        }
+
 
 		/* 
 		=================================================================
