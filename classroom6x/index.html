@@ -49,49 +49,79 @@
     <!-- Header Area Start -->
     <nav class="fag-header navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.png" alt="FAF Games" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/"><img src="/assets/img/logo.png"
+                    alt="Unblocked Games Premium" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="menu-toggle"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                <ul class="header_menu  mr-auto">
+                <ul class="header_menu mr-auto">
                     <li class="nav-item active">
-                        <a href="../index.html" class="nav-link">Home</a>
+                        <a href="/" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                            <a href="../action/index.html" class="nav-link">Action</a>
+                        <a href="/action/index.html" class="nav-link">Action</a>
                     </li>
                     <li class="nav-item">
-                            <a href="../adventure/index.html" class="nav-link">Adventure</a>
+                        <a href="/adventure/index.html" class="nav-link">Adventure</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../bike/index.html" class="nav-link">Bike</a>
-                    </li>        
-                    <li class="nav-item">
-                            <a href="../car/index.html" class="nav-link">Car</a>
-                    </li>        
-                    <li class="nav-item">
-                        <a href="../idle/index.html" class="nav-link">Idle</a>
+                        <a href="/bike/index.html" class="nav-link">Bike</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../shooting/index.html" class="nav-link">Shooting</a>
+                        <a href="/car/index.html" class="nav-link">Car</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../skill/index.html" class="nav-link">Skill</a>
+                        <a href="/classroom6x/index.html" class="nav-link">Classroom 6X</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="../sport/index.html" class="nav-link">Sport</a>
+
+                    <li class="nav-item dropdown">
+                        <p  class="nav-link dropdown-toggle" id="shootingDropdown" 
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">More</p>
+                        <ul class="dropdown-menu" aria-labelledby="shootingDropdown">
+                            <li class="nav-item">
+                                <a href="/idle/index.html" class="nav-link">Idle</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/shooting/index.html" class="nav-link">Shooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/skill/index.html" class="nav-link">Skill</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/sport/index.html" class="nav-link">Sport</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="../1v1-lol/index.html" class="nav-link">1v1 lol</a>
+                            </li>
+                        </ul>
                     </li>
-                     <li class="nav-item">
-                        <a href="../classroom6x/index.html" class="nav-link">Classroom 6X</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../1v1-lol/index.html" class="nav-link">1v1 lol</a>
-                    </li>
+
+                </ul>
+                <div class="search-bar-container ms-auto">
+                    <input type="text" id="gameSearchInput" class="search-bar-input"
+                        placeholder="Search 468 / 849 games..." readonly style="cursor:pointer;" />
+                    <span class="search-bar-icon"><i class="fas fa-search"></i></span>
+                </div>
+                </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+        <div class="search-overlay-header">
+            <input type="text" id="searchOverlayInput" class="search-overlay-input"
+                placeholder="Search 468 / 849 games..." autofocus />
+            <span class="search-overlay-close" id="searchOverlayClose">&times;</span>
+        </div>
+        <div id="searchResults" class="search-results-grid"></div>
+    </div>
+
+    <div class="search-overlay-bg"></div>
     <!-- Header Area End -->
     <!-- Games Area Strat -->
     <section class="fag-games-area section_140">
@@ -927,7 +957,7 @@
                     <div class="col-12">
                         <div class="footer-bottom-inn">
                             <div class="footer-logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <img src="../assets/img/logo.png" alt="FAF Games" />
                                 </a>
                             </div>

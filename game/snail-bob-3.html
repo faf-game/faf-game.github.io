@@ -6,7 +6,7 @@
     <link rel="icon" href="images/icon-red.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="
+    <meta name="description" content="">
     <meta name="title" content="Snail Bob 3, Snail Bob 3 Unblocked">
     <meta name="keywords" content="Snail Bob 3 Game, 
     puzzle games examples
@@ -331,7 +331,7 @@
       </div>
       <div class="theme-switcher__body">
         <div class="single dark active">
-          <a href="index.html">Dark Version</a>
+          <a href="/">Dark Version</a>
         </div>
         <div class="single light mt-4">
           <a href="light-index.html">Light Version</a>
@@ -344,21 +344,81 @@
     <header class="header">
       <div class="header__bottom">
         <div class="container">
-          <nav class="navbar navbar-expand-xl p-0 align-items-center">
-            <a class="site-logo site-title" href="index.html"><img src="assets/images/favicon.png" alt="site-logo"><span class="logo-icon"><i class="flaticon-fire"></i></span></a>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="menu-toggle"></span>
+         <nav class="fag-header navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="/assets/img/logo.png"
+                    alt="Unblocked Games Premium" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="menu-toggle"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav main-menu ml-auto">
-                <li><a href="action-games.html">Action</a></li>
-                <li><a href="cars-games.html">Cars</a></li>
-                <li><a href="puzzle-games.html">Puzzle</a></li>
-                <li><a href="running-games.html">Running</a></li>
-                <li><a href="shooting-games.html">Shooting</a></li>
-              </ul>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="header_menu mr-auto">
+                    <li class="nav-item active">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/action/index.html" class="nav-link">Action</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/adventure/index.html" class="nav-link">Adventure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/bike/index.html" class="nav-link">Bike</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/car/index.html" class="nav-link">Car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/classroom6x/index.html" class="nav-link">Classroom 6X</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <p  class="nav-link dropdown-toggle" id="shootingDropdown" 
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">More</p>
+                        <ul class="dropdown-menu" aria-labelledby="shootingDropdown">
+                            <li class="nav-item">
+                                <a href="/idle/index.html" class="nav-link">Idle</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/shooting/index.html" class="nav-link">Shooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/skill/index.html" class="nav-link">Skill</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/sport/index.html" class="nav-link">Sport</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="../1v1-lol/index.html" class="nav-link">1v1 lol</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <div class="search-bar-container ms-auto">
+                    <input type="text" id="gameSearchInput" class="search-bar-input"
+                        placeholder="Search 468 / 849 games..." readonly style="cursor:pointer;" />
+                    <span class="search-bar-icon"><i class="fas fa-search"></i></span>
+                </div>
+                </li>
+                </ul>
             </div>
-          </nav>
+        </div>
+    </nav>
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+        <div class="search-overlay-header">
+            <input type="text" id="searchOverlayInput" class="search-overlay-input"
+                placeholder="Search 468 / 849 games..." autofocus />
+            <span class="search-overlay-close" id="searchOverlayClose">&times;</span>
+        </div>
+        <div id="searchResults" class="search-results-grid"></div>
+    </div>
+
+    <div class="search-overlay-bg"></div>
         </div>
       </div><!-- header__bottom end -->
     </header>

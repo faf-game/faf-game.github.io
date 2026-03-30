@@ -33,7 +33,7 @@ JS INDEX
         var games = []; // Will be loaded from search.json
 
         // Load games from search.json
-        $.getJSON('search.json', function(data) {
+        $.getJSON('/search.json', function(data) {
             games = data;
             // Now set up the search functionality
             setupSearch();
@@ -64,7 +64,7 @@ JS INDEX
                     '</a>';
                 }).join("");
                 if (results.length === 0) {
-                    html = '<div style="color:#fff;font-size:22px;padding:40px 0;width:100%;text-align:center;">No games found.</div>';
+                    html = '<div style="color:#222;font-size:22px;padding:40px 0;width:100%;text-align:center;">No games found.</div>';
                 }
                 $("#searchResults").html(html);
             }
