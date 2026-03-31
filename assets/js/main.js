@@ -64,7 +64,7 @@ JS INDEX
                     '</a>';
                 }).join("");
                 if (results.length === 0) {
-                    html = '<div style="color:#222;font-size:22px;padding:40px 0;width:100%;text-align:center;">No games found.</div>';
+                    html = '<div style="color:#fff;font-size:22px;padding:40px 0;width:100%;text-align:center;">No games found.</div>';
                 }
                 $("#searchResults").html(html);
             }
@@ -402,3 +402,62 @@ JS INDEX
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "w28lzzbr2g");
+
+	 function open_fullscreen() {
+                 let game = document.getElementById("game-area");
+                 if (game.requestFullscreen) {
+                 game.requestFullscreen();
+                 } else if (game.mozRequestFullScreen) { /* Firefox */
+                 game.mozRequestFullScreen();
+                 } else if (game.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                 game.webkitRequestFullscreen();
+                 } else if (game.msRequestFullscreen) { /* IE/Edge */
+                 game.msRequestFullscreen();
+                 }
+                 };
+           function toggleFullScreenIframe() {
+               var iframe = document.querySelector('.game-iframe');
+               if (iframe.requestFullscreen) {
+                   iframe.requestFullscreen();
+               } else if (iframe.mozRequestFullScreen) {
+                   iframe.mozRequestFullScreen();
+               } else if (iframe.webkitRequestFullscreen) {
+                   iframe.webkitRequestFullscreen();
+               } else if (iframe.msRequestFullscreen) {
+                   iframe.msRequestFullscreen();
+               }
+           }
+           function shareGame() {
+               if (navigator.share) {
+                   navigator.share({
+                       title: document.title,
+                       url: window.location.href
+                   });
+               } else {
+                   prompt('Copy this link:', window.location.href);
+               }
+           }
+           function likeGame(btn) {
+               btn.classList.toggle('liked');
+           }
+           function dislikeGame(btn) {
+               btn.classList.toggle('disliked');
+           }
+         
+ 
+function shareGame() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      url: window.location.href
+    });
+  } else {
+    prompt('Copy this link:', window.location.href);
+  }
+}
+function likeGame(btn) {
+  btn.classList.toggle('liked');
+}
+function dislikeGame(btn) {
+  btn.classList.toggle('disliked');
+}

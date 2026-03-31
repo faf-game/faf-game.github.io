@@ -294,7 +294,6 @@
                 margin-bottom: 30px;
                 margin-top: 20px
             }
-            
         </style>
        </head>
        <body>
@@ -419,8 +418,16 @@
           </div>
         </section>
         <!-- contest-details-section end  -->
-           
-                                    <h1 class="heading_animation" style="text-align: center; color:black"><mark>1v1.lol Unblocked</mark></h1>
+           <div class="container">
+           <div class="game-title-action-row w-100 d-flex align-items-center justify-content-between mt-3">
+          <span class="game-title-left">1v1.lol Unblocked</span>
+          <div class="game-action-buttons">
+          <button class="game-action-btn" title="Share" onclick="shareGame()"><i class="fas fa-share-alt"></i></button>
+          <button class="game-action-btn" title="Like" onclick="likeGame(this)"><i class="fas fa-thumbs-up"></i></button>
+          <button class="game-action-btn" title="Dislike" onclick="dislikeGame(this)"><i class="fas fa-thumbs-down"></i></button>
+          <button class="game-action-btn" title="Fullscreen" onclick="toggleFullScreenIframe()"><i class="fas fa-expand"></i></button>
+          </div>
+         </div></div>
           <!-- Related Games Start -->
           <section class="fag-games-area related_games section_100">
              <div class="container">
@@ -913,7 +920,7 @@
                                      </ul>
                                  </div>
                                  <div class="copyright">
-                                     <p>&copy; Copyrights 2020 FAF GAMES - All Rights Reserved</p>
+                                     <p>&copy; Copyrights 2026 FAF GAMES - All Rights Reserved</p>
                                  </div>
                              </div>
                          </div>
@@ -944,22 +951,10 @@
         <script>
            function loadMainGame()
            {
-                 var html = `<iframe class="game-iframe iframeloader" id="game-area" src="https://education76.github.io/g77/1v1-lol-3/" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen="" tabindex="0"></iframe>`;
+                 var html = `<iframe class="game-iframe iframeloader" id="game-area" src="https://eggycarunblocked.shop/1v1-lol/" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen="" tabindex="0"></iframe>`;
                  document.getElementById("loadgame").innerHTML = html;
                  document.getElementById('loadgame').scrollIntoView();
            }
-           function open_fullscreen() {
-                 let game = document.getElementById("game-area");
-                 if (game.requestFullscreen) {
-                 game.requestFullscreen();
-                 } else if (game.mozRequestFullScreen) { /* Firefox */
-                 game.mozRequestFullScreen();
-                 } else if (game.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-                 game.webkitRequestFullscreen();
-                 } else if (game.msRequestFullscreen) { /* IE/Edge */
-                 game.msRequestFullscreen();
-                 }
-                 };
-        </script>
+</script> 
 </body>
 </html>
