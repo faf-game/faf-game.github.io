@@ -4823,7 +4823,7 @@ input[type="radio"]:checked ~ label {
              /* Game Highlight Styles */
             .game-iframe-container {
                 border: 4px solid #ff7a21;
-                border-radius: 18px;
+                border-radius: 10px;
                 overflow: hidden;
                 box-shadow: 0 4px 32px rgba(0,0,0,0.18);
                 background: #181a23;
@@ -4833,8 +4833,12 @@ input[type="radio"]:checked ~ label {
                 justify-content: center;
             }
             .game-title-action-row {
-                margin-top: 16px;
+                margin-top: -13px;
                 margin-bottom: 16px;
+                border: 4px solid #ff7a21;
+                border-radius: 10px;
+                padding: 21px 8px 10px 6px;
+                background: #181a23;
             }
             .game-title-left {
                 font-size: 1.3rem;
